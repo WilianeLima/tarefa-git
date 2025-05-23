@@ -1,0 +1,35 @@
+mkdir tarefa-git
+cd tarefa-git
+git init
+echo "Wiliane da Silva Lima - 70274445425" > arquivo1.txt
+echo "Embarcatech - Campus Currais novos" > arquivo2.txt
+echo "Matricula Git -  20251ZL00130041" > arquivo3.txt
+git add arquivo1.txt arquivo2.txt arquivo3.txt
+git config --global user.name "Wiliane Lima"
+git config --global user.email "Wiliane.lima@alunos.ufersa.edu.br"
+git commit -m "Commit inicial com meus dados pessoais, curso e matrícula Git"
+git status
+git diff arquivo2.txt
+git diff arquivo3.txt
+echo "Alteração feita no arquivo 2" >> arquivo2.txt
+echo "Alteração feita no arquivo 3" >> arquivo3.txt
+git add .
+git commit -m "Alterações em arquivo2.txt e arquivo3.txt"
+git log --oneline
+git log
+git log --graph --all --decorate
+git revert HEAD
+git stash
+git checkout master
+git stash pop
+git reflog
+git log --reverse --oneline
+git tag -a v1.0 <801bd4c> -m "Versão estável inicial"
+git remote remove origin
+git remote add origin https://github.com/wilianeLima/tarefa-git.git
+git push -u origin master
+git push origin v1.0
+notepad comandos.txt
+git add comandos.txt
+git commit -m "Adiciona arquivo com comandos usados na tarefa"
+git push origin master
